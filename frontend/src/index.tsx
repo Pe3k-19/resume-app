@@ -1,12 +1,17 @@
 import { render } from "preact";
-import "./style.css";
+import { LanguageProvider } from "./Utils/language";
+import { Layout } from "./modules/Layout/Layout";
+import "./styles/base.css";
+import "./styles/layout.css";
+import "./styles/components.css";
 
 export function App() {
-  return (
-    <div>
-      <h1>Resume App project </h1>
-    </div>
-  );
+  return <Layout />;
 }
 
-render(<App />, document.getElementById("app")!);
+render(
+  <LanguageProvider>
+    <App />
+  </LanguageProvider>,
+  document.getElementById("app")!,
+);
