@@ -1,23 +1,19 @@
 export const Icon = ({
   icon,
   isBig = false,
-  isOnRight = false,
+  isGold = false,
   customSizeImage,
-  ...rest
 }: {
   icon: IconType;
   isBig?: boolean;
-  isOnRight?: boolean;
+  isGold?: boolean;
   customSizeImage?: number;
 }) => {
   const IconComp = icon;
 
   return (
     <div
-      className={`icon ${isBig ? "big-icon" : "small-icon"}`}
-      style={{
-        ...rest,
-      }}
+      className={`icon ${isBig ? "big-icon" : "small-icon"} ${isGold ? "color-gold" : "color-white"}`}
     >
       <IconComp
         width={customSizeImage ? customSizeImage : isBig ? 28 : 20}

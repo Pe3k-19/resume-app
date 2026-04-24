@@ -1,25 +1,15 @@
-import { Icon } from "./Icon";
-
-type Style = {
-  [key: string]: string;
-};
+import { ReactNode } from "preact/compat";
+import { CSSProperties } from "preact";
 
 export const RowComponent = ({
-  icon,
-  text,
+  component,
   styles,
-  isSection,
 }: {
-  icon: IconType;
-  text: string;
-  styles: Style;
-  isSection?: boolean;
+  component: ReactNode;
+  styles: CSSProperties;
 }) => (
   <div className="row-block" style={{ ...styles }}>
     <div className="separator" />
-    <div className="row-content">
-      <Icon icon={icon} isBig={isSection} />
-      <span className={`text ${isSection && "section"}`}>{text}</span>
-    </div>
+    {component}
   </div>
 );
