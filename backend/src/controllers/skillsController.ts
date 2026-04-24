@@ -1,8 +1,8 @@
-import { Skills } from "../models/Skills";
+import { Skill } from "../models/Skill";
 
 export const getSkills = async (req: any, res: any) => {
   const results = parseInt(req.query.results) || 10;
-  const skills = await Skills.find().limit(results);
+  const skills = await Skill.find().limit(results);
   res.json(skills);
 };
 

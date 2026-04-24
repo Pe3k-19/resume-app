@@ -6,7 +6,7 @@ connectDB();
 
 import express from "express";
 import cors from "cors";
-import skillsRoutes from "./routes/skillsRoutes";
+import routes from "./routes/routes";
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
   res.send("API beží 🚀 (TS verzia)");
 });
 
-app.use("/api", skillsRoutes);
+app.use("/api", routes);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Server is running on port ${process.env.PORT || 5000}`);
