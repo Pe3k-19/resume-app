@@ -1,10 +1,12 @@
 import express from "express";
+import { getAbouts } from "../controllers/aboutsController";
 import { getSkills } from "../controllers/skillsController";
 import { getInformations } from "../controllers/informationsController";
 
 const router = express.Router();
 
 router.get("/me", getInformations);
+router.get("/abouts", getAbouts);
 router.get("/skills", getSkills);
 // router.post("/skills", createSkill);
 // router.put("/skills/:id", updateSkill);
