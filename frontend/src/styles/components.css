@@ -1,13 +1,20 @@
 /* BUTTONS */
 button {
-  min-width: auto;
-  background-color: transparent;
-  color: #3f50b5;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #7c7c7c;
+  background: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #3a3a3a;
+  border-color: #3a3a3a;
 }
 
 button:active {
-  background-color: #3f50b5;
-  color: #fff;
+  background: #3a3a3a;
 }
 
 .language-buttons {
@@ -73,11 +80,11 @@ button:active {
 
 .separator {
   width: 16px;
+  min-width: 16px;
   height: 100%;
   min-height: 16px;
   border-radius: 8px;
   background-color: #fca800;
-  margin-left: 0.08rem;
 }
 
 .row-content {
@@ -87,9 +94,10 @@ button:active {
 
 .row-detail {
   display: flex;
+  text-align: start;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.2rem;
+  gap: 0.5rem;
 }
 
 /* DIVIDER */
@@ -125,8 +133,9 @@ button:active {
 .progressBarContainer {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   width: 100%;
-  gap: 1rem;
+  gap: 0.7rem;
 }
 
 .progressBarBase {

@@ -8,7 +8,7 @@ export const ProgressBar = ({
   isSmall?: boolean;
 }) => (
   <div className="progressBarContainer">
-    <div className="text">{label}</div>
+    <span>{label}</span>
     <div className={`progressBarBase ${isSmall ? "h-5" : "h-10"}`}>
       <div
         className={`progressBar ${isSmall ? "h-5" : "h-10"}`}

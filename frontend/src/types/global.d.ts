@@ -2,6 +2,10 @@ import { JSX } from "preact";
 import { ReactNode } from "preact/compat";
 
 declare global {
+  interface MultiLangItem {
+    [key: string]: string;
+  }
+
   type IconProps = JSX.IntrinsicElements["svg"];
 
   type IconType = ComponentType<{
@@ -24,4 +28,54 @@ declare global {
     text: string;
     value: number;
   };
+
+  interface MeItem {
+    _id: string;
+    address: string;
+    certificates: CertificateItem[];
+    city: string;
+    email: string;
+    high_school: HighSchoolItem;
+    languages: {
+      _id: string;
+      name: MultiLangItem;
+      value: number;
+    }[];
+    name: string;
+    phone: string;
+    postcode: string;
+    surname: string;
+  }
+
+  interface HighSchoolItem {
+    address: string;
+    city: string;
+    from: number;
+    name: MultiLangItem;
+    postcode: string;
+    profesion: MultiLangItem;
+    to: number;
+  }
+
+  interface CertificateItem {
+    _id: string;
+    name: string;
+    source: string;
+    year: string;
+  }
+
+  interface AddressItem {
+    address: string;
+    city: string;
+    postcode: string;
+  }
+
+  interface AboutItem {
+    _id: string;
+    name: string;
+    surname: string;
+    position: string;
+    about_text_1: MultiLangItem;
+    about_text_2: MultiLangItem;
+  }
 }

@@ -9,7 +9,7 @@ export const IconTextComponent = ({
   isGold,
 }: {
   icon: IconType;
-  text: string;
+  text?: string;
   component?: () => ReactNode;
   isSection?: boolean;
   isGold?: boolean;
@@ -17,9 +17,16 @@ export const IconTextComponent = ({
   return (
     <div className="row-content">
       <Icon icon={icon} isBig={isSection} isGold={isGold} />
-      <div style={{ display: "flex", flexDirection: "column", gap: "0.2rem" }}>
-        <span className={`text ${isSection && "section"}`}>{text}</span>
-        <div>{component && component()}</div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "flex-start",
+          flexDirection: "column",
+        }}
+      >
+        {text && <span className={`${isSection && "section"}`}>{text}</span>}
+        {component && <div style={{ marginTop: "0.15rem" }}>{component()}</div>}
       </div>
     </div>
   );
