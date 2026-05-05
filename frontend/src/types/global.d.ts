@@ -78,4 +78,31 @@ declare global {
     about_text_1: MultiLangItem;
     about_text_2: MultiLangItem;
   }
+
+  interface ProjectItem {
+    _id: string;
+    name: string;
+    description: MultiLangItem;
+    tech_stack: string[];
+    link?: string;
+  }
+
+  interface WorkItem {
+    _id: string;
+    position: string;
+    company: string;
+    from: string;
+    to: string;
+    projects: ProjectItem[];
+  }
+
+  interface SkillItem {
+    _id: string;
+    name: string;
+    value: number;
+  }
+
+  interface SkillsGroup {
+    [key: string]: SkillItem[];
+  }
 }

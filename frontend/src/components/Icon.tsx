@@ -13,7 +13,7 @@ export const Icon = ({
 
   return (
     <div
-      className={`icon ${isBig ? "big-icon" : "small-icon"} ${isGold ? "color-gold" : "color-white"}`}
+      className={`icon ${isBig ? "big-icon" : "small-icon"} ${isGold ? "bgcolor-gold" : "bgcolor-white"}`}
     >
       <IconComp
         width={customSizeImage ? customSizeImage : isBig ? 28 : 20}

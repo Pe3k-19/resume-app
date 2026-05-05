@@ -1,0 +1,24 @@
+export const translations = {
+  sk: {
+    contact_me: "Kontaktuj ma",
+    education: "Vzdelanie",
+    high_school: "Stredná škola",
+    certificates: "Certifikáty",
+    languages: "Jazyky",
+    about: "O mne",
+    work_experience: "Pracovné skúsenosti",
+    project: "Projekt",
+    skills: "Technické zručnosti",
+  },
+  en: {
+    contact_me: "Contact me",
+    education: "Education",
+    high_school: "High school",
+    certificates: "Certificates",
+    languages: "Languages",
+    about: "About me",
+    work_experience: "Work Experience",
+    project: "Project",
+    skills: "Technical Skills",
+  },
+};

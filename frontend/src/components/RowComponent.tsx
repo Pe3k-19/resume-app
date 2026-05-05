@@ -6,7 +6,7 @@ export const RowComponent = ({
   styles,
 }: {
   component: ReactNode;
-  styles: CSSProperties;
+  styles?: CSSProperties;
 }) => (
   <div className="row-block" style={{ ...styles }}>
     <div className="separator" />

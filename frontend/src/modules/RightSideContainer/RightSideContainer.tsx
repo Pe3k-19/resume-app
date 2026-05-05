@@ -1,34 +1,36 @@
-import { IconTextComponent } from "../../components/IconTextComponent";
-import { RowComponent } from "../../components/RowComponent";
-import { Triangle } from "../../components/Triangle";
-import { ContentData } from "../../data/contentData";
+import { useEffect, useState } from "preact/hooks";
 import { Header } from "./components/Header";
+import { Skills } from "./components/Skills";
+import { Triangle } from "../../components/Triangle";
+import { WorkSection } from "./components/WorkSection";
+import { AboutSection } from "./components/AboutSection";
 
-const contentComponents = ContentData.map((item) => (
-  <RowComponent
-    key={item.text} // TEMP
-    component={
-      <IconTextComponent
-        icon={item.icon}
-        text={item.text}
-        isSection={item.isSection}
-        isGold
-      />
-    }
-    styles={{ height: item.height, marginTop: item.marginTop ?? "" }}
-  />
-));
+export const RightSideContainer = () => {
+  const [data, setData] = useState();
 
-export const RightSideContainer = () => (
-  <div className="resume-right-container">
-    <div className="character-block">
-      <div className="character-line" />
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("http://localhost:5000/api/abouts");
+      const json = await res.json();
+      setData(json);
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div className="resume-right-container">
+      <div className="gray-line" />
+      <div className="character-block">
+        <div className="character-line" />
+      </div>
+      <div className="content">
+        <Header data={data} />
+        <AboutSection data={data} />
+        <WorkSection />
+        <Skills />
+      </div>
+      <Triangle />
     </div>
-    <div className="content">
-      <Header />
-      {contentComponents}
-    </div>
-    <Triangle />
-    {/* <RightSideContent /> */}
-  </div>
-);
+  );
+};
