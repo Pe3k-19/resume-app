@@ -13,10 +13,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("API beží 🚀 (TS verzia)");
-});
-
 app.use("/api", routes);
 
 app.listen(process.env.PORT || 5000, () => {
