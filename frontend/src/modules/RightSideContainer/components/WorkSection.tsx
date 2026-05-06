@@ -1,4 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
+import { apiFetch } from "../../../Utils/api";
 import { useTranslation } from "../../../Utils/language";
 import { BagIcon } from "../../../components/Icons/BagIcon";
 import { RowComponent } from "../../../components/RowComponent";
@@ -12,13 +13,7 @@ export const WorkSection = () => {
   const [data, setData] = useState<WorkItem[]>();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("http://localhost:5000/api/works");
-      const json = await res.json();
-      setData(json);
-    };
-
-    fetchData();
+    apiFetch("/works").then(setData).catch(console.error);
   }, []);
 
   const workItems = (data || []).map((item, idx) => (

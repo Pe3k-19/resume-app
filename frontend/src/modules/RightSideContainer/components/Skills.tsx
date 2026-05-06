@@ -1,4 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
+import { apiFetch } from "../../../Utils/api";
 import { useTranslation } from "../../../Utils/language";
 import { ProgressBar } from "../../../components/ProgressBar";
 import { RowComponent } from "../../../components/RowComponent";
@@ -10,17 +11,15 @@ export const Skills = () => {
   const [data, setData] = useState<SkillsGroup>();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("http://localhost:5000/api/skills/?results=20");
-      const json = await res.json();
-      setData({
-        0: json.slice(0, 7),
-        1: json.slice(7, 13),
-        2: json.slice(13),
-      });
-    };
-
-    fetchData();
+    apiFetch("/skills/?results=20")
+      .then((res) => {
+        setData({
+          0: res.slice(0, 7),
+          1: res.slice(7, 13),
+          2: res.slice(13),
+        });
+      })
+      .catch(console.error);
   }, []);
 
   const SkillsComponents = () => {

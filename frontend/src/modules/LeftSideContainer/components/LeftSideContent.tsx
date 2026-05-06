@@ -1,5 +1,6 @@
-import { ContactSection } from "./ContactSection";
 import { useState, useEffect } from "preact/hooks";
+import { apiFetch } from "../../../Utils/api";
+import { ContactSection } from "./ContactSection";
 import { EducationSection } from "./EducationSection";
 import { useTranslation } from "../../../Utils/language";
 import { ProgressBar } from "../../../components/ProgressBar";
@@ -12,13 +13,7 @@ export const LeftSideContent = () => {
   const { t, lang } = useTranslation();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("http://localhost:5000/api/me");
-      const json = await res.json();
-      setData(json);
-    };
-
-    fetchData();
+    apiFetch("/me").then(setData).catch(console.error);
   }, []);
 
   return (
