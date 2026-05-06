@@ -4,19 +4,11 @@ export const LanguageButtons = () => {
   const { lang, setLang } = useTranslation();
 
   return (
-    <div className="language-buttons">
-      <button
-        className="text"
-        disabled={lang === "sk"}
-        onClick={() => setLang("sk")}
-      >
+    <div className="flex justify-center gap-05 mb-1 language-container">
+      <button disabled={lang === "sk"} onClick={() => setLang("sk")}>
         SK
       </button>
-      <button
-        className="text"
-        disabled={lang === "en"}
-        onClick={() => setLang("en")}
-      >
+      <button disabled={lang === "en"} onClick={() => setLang("en")}>
         EN
       </button>
     </div>

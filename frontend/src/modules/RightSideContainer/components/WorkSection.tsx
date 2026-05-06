@@ -5,7 +5,7 @@ import { RowComponent } from "../../../components/RowComponent";
 import { WorkExperience } from "../../../components/WorkExperience";
 import { IconTextComponent } from "../../../components/IconTextComponent";
 
-const MARGIN_TOP_BASE = [1, 11, 8.8];
+const MARGIN_TOP_BASE = [0.8, 11, 8.8];
 
 export const WorkSection = () => {
   const { t } = useTranslation();
@@ -34,7 +34,7 @@ export const WorkSection = () => {
   ));
 
   return (
-    <div className="flex-column flex-a-start">
+    <div>
       <RowComponent
         component={
           <IconTextComponent

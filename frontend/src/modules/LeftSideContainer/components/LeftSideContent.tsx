@@ -22,12 +22,12 @@ export const LeftSideContent = () => {
   }, []);
 
   return (
-    <div className="left-content-block">
+    <div className="flex flex-col gap-1 text-light left-content-block">
       <ContactSection data={data} />
-      <div className="divider" />
+      <div className="mb-1 divider" />
       <EducationSection data={data} />
       {/* Languages */}
-      <div className="divider" style={{ marginTop: "4.5rem" }} />
+      <div className="mb-1 divider" style={{ marginTop: "4.5rem" }} />
       <RowComponent
         component={
           <IconTextComponent icon={EarthIcon} text={t("languages")} isSection />

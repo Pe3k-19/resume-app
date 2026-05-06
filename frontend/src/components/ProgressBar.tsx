@@ -7,11 +7,13 @@ export const ProgressBar = ({
   progress: number;
   isSmall?: boolean;
 }) => (
-  <div className={`progressBarContainer ${!isSmall && "gap-07"}`}>
+  <div className={`flex flex-col items-start w-full ${!isSmall && "gap-07"}`}>
     <span className={`${isSmall && "size-14 bold uppercase"}`}>{label}</span>
-    <div className={`progressBarBase ${isSmall ? "h-5" : "h-10"}`}>
+    <div
+      className={`flex w-full bg-gray progressBar ${isSmall ? "h-5" : "h-10"}`}
+    >
       <div
-        className={`progressBar ${isSmall ? "h-5" : "h-10"}`}
+        className={`bg-accent progressBar ${isSmall ? "h-5" : "h-10"}`}
         style={{ width: `${progress}%` }}
       />
     </div>

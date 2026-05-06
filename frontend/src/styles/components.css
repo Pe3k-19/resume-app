@@ -1,103 +1,43 @@
-/* BUTTONS */
-button {
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  border: 1px solid #7c7c7c;
-  background: #1a1a1a;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-button:hover {
-  background: #3a3a3a;
-  border-color: #3a3a3a;
-}
-
-button:active {
-  background: #3a3a3a;
-}
-
-.language-buttons {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+.language-container {
+  margin-top: 1rem;
 }
 
 /* TRIANGLE */
 .triangle-big {
-  position: absolute;
-  height: 420px;
-  width: 0;
   border-left: 0px solid transparent;
   border-right: 420px solid transparent;
   border-top: 420px solid #fca800;
 }
 
 .triangle-small {
-  position: absolute;
-  height: 150px;
-  top: 1065;
   right: 0;
-  width: 0;
+  bottom: 0;
   border-left: 150px solid transparent;
   border-right: 0px solid transparent;
   border-bottom: 150px solid #fca800;
 }
 
 /* PHOTO */
-.photo-block {
-  position: relative;
-  width: 100%;
-  height: 420px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.photo-white-line {
-  width: 200px;
-  height: 200px;
-  background-color: white;
+.photo-line {
   padding: 0.75rem;
   border-radius: 50% 50% 50% 0;
 }
-.photo {
+.photo-block {
   background-size: cover;
   background-position: -20px;
-  width: 200px;
-  height: 200px;
   border-radius: 50% 50% 50% 0;
 }
 
 /* ROW COMPONENT */
 .row-block {
-  display: flex;
-  position: relative;
   height: 50px;
-  align-items: center;
-  gap: 2rem;
 }
 
 .separator {
   width: 16px;
   min-width: 16px;
-  height: 100%;
   min-height: 16px;
   border-radius: 8px;
-  background-color: #fca800;
-}
-
-.row-content {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.row-detail {
-  display: flex;
-  text-align: start;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
 }
 
 /* DIVIDER */
@@ -105,18 +45,13 @@ button:active {
   width: 85%;
   height: 2px;
   margin-top: 1.5rem;
-  margin-bottom: 1rem;
   margin-left: 3rem;
   border-bottom: 2px dashed #fff;
 }
 
 /* ICON */
 .icon {
-  background-color: #fff;
   border-radius: 19px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .big-icon {
@@ -130,22 +65,37 @@ button:active {
 }
 
 /* PROGRESS BAR */
-.progressBarContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  gap: 0.7rem;
-}
-
-.progressBarBase {
-  display: flex;
-  width: 100%;
-  background-color: #5d5f61;
-  border-radius: 5px;
-}
-
 .progressBar {
-  background-color: #fca800;
   border-radius: 5px;
+}
+
+/* WORK EXPERIENCE */
+.workExperience {
+  width: 480px;
+}
+
+.positionText {
+  font-size: 18px;
+}
+
+.projectsBlock {
+  padding: 1rem 0 0 0.5rem;
+}
+
+.techText {
+  font-size: 16px;
+}
+
+.skillsContainer {
+  padding-left: 3.5rem;
+  gap: 0.7rem 1rem;
+}
+
+.skillBlock {
+  width: 145px;
+  gap: 0.8rem;
+}
+
+.component {
+  margin-top: 0.15rem;
 }

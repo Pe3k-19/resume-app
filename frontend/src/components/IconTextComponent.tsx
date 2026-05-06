@@ -15,18 +15,15 @@ export const IconTextComponent = ({
   isGold?: boolean;
 }) => {
   return (
-    <div className="row-content">
+    <div className="flex gap-05">
       <Icon icon={icon} isBig={isSection} isGold={isGold} />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          flexDirection: "column",
-        }}
-      >
-        {text && <span className={`${isSection && "section"}`}>{text}</span>}
-        {component && <div style={{ marginTop: "0.15rem" }}>{component()}</div>}
+      <div className="flex flex-col items-start justify-center">
+        {text && (
+          <span className={`${isSection && "bold uppercase size-24"}`}>
+            {text}
+          </span>
+        )}
+        {component && <div className="component">{component()}</div>}
       </div>
     </div>
   );

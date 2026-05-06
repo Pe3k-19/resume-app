@@ -19,12 +19,12 @@ export const RightSideContainer = () => {
   }, []);
 
   return (
-    <div className="resume-right-container">
-      <div className="gray-line" />
-      <div className="character-block">
-        <div className="character-line" />
+    <div className="relative h-full bg-white text-dark resume-right-container">
+      <div className="absolute w-full bg-light gray-line" />
+      <div className="h-full absolute character-block">
+        <div className="h-full bg-gray character-line" />
       </div>
-      <div className="content">
+      <div className="flex flex-col gap-1 content">
         <Header data={data} />
         <AboutSection data={data} />
         <WorkSection />

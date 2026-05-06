@@ -8,8 +8,11 @@ export const RowComponent = ({
   component: ReactNode;
   styles?: CSSProperties;
 }) => (
-  <div className="row-block" style={{ ...styles }}>
-    <div className="separator" />
+  <div
+    className="flex items-center gap-2 relative row-block"
+    style={{ ...styles }}
+  >
+    <div className="h-full relative bg-accent separator" />
     {component}
   </div>
 );

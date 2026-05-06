@@ -7,7 +7,7 @@ export const AboutSection = ({ data }: { data?: AboutItem }) => {
   const { t, lang } = useTranslation();
 
   return (
-    <div className="flex-column flex-a-start">
+    <div className="flex flex-col text-left">
       <RowComponent
         component={
           <IconTextComponent
@@ -18,7 +18,7 @@ export const AboutSection = ({ data }: { data?: AboutItem }) => {
           />
         }
       />
-      <div className="right-content-block">
+      <div className="flex flex-col items-start text-gray right-content-block">
         <span>{data?.about_text_1?.[lang]}</span>
         <br />
         <span>{data?.about_text_2?.[lang]}</span>

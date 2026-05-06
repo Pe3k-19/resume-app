@@ -3,10 +3,10 @@ import { LeftSideContainer } from "../LeftSideContainer/LeftSideContainer";
 import { RightSideContainer } from "../RightSideContainer/RightSideContainer";
 
 export const Layout = () => (
-  <div className="layout">
+  <div className="flex flex-col items-center layout">
     <LanguageButtons />
-    <div className="flex-center p-40">
-      <div className="resume-container">
+    <div className="flex items-center justify-center">
+      <div className="flex resume-container">
         <LeftSideContainer />
         <RightSideContainer />
       </div>

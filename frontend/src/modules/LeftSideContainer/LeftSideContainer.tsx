@@ -3,9 +3,9 @@ import { Triangle } from "../../components/Triangle";
 import { LeftSideContent } from "./components/LeftSideContent";
 
 export const LeftSideContainer = () => (
-  <div className="resume-left-container">
-    <div className="character-block">
-      <div className="character-line" />
+  <div className="relative bg-dark h-full resume-left-block">
+    <div className="h-full absolute character-block">
+      <div className="h-full bg-gray character-line" />
     </div>
     <Triangle isBig />
     <Photo />
