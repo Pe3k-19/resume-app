@@ -15,11 +15,7 @@ export const Icon = ({
     <div
       className={`flex items-center justify-center icon ${isBig ? "big-icon" : "small-icon"} ${isGold ? "bg-accent" : "bg-white"}`}
     >
-      <IconComp
-        width={customSizeImage ? customSizeImage : isBig ? 28 : 20}
-        height={customSizeImage ? customSizeImage : isBig ? 28 : 20}
-        color="#333333"
-      />
+      <IconComp color="#333333" />
     </div>
   );
 };

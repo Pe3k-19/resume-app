@@ -32,7 +32,7 @@ export const EducationSection = ({ data }: { data?: MeItem }) => {
         styles={{
           height: "16px",
           alignItems: "flex-start",
-          marginTop: "1.5rem",
+          marginTop: "0.5rem",
         }}
       />
       <RowComponent
@@ -48,9 +48,9 @@ export const EducationSection = ({ data }: { data?: MeItem }) => {
             )}
           />
         }
+        className="certificate-row"
         styles={{
           height: "16px",
-          marginTop: "7.5rem",
           alignItems: "flex-start",
         }}
       />

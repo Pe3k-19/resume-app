@@ -22,13 +22,13 @@ export const ContactSection = ({ data }: { data?: MeItem }) => {
         component={
           <IconTextComponent icon={PhoneIcon} text={data?.phone ?? ""} />
         }
-        styles={{ height: "16px", marginTop: "1.5rem" }}
+        styles={{ height: "16px", marginTop: "0.5rem" }}
       />
       <RowComponent
         component={
           <IconTextComponent icon={MailIcon} text={data?.email ?? ""} />
         }
-        styles={{ height: "16px", marginTop: "1rem" }}
+        styles={{ height: "16px", marginTop: "0.5rem" }}
       />
       <RowComponent
         component={
@@ -37,7 +37,7 @@ export const ContactSection = ({ data }: { data?: MeItem }) => {
             component={() => AddressToString(data as AddressItem)}
           />
         }
-        styles={{ height: "16px", marginTop: "1rem" }}
+        styles={{ height: "16px", marginTop: "0.5rem" }}
       />
     </>
   );

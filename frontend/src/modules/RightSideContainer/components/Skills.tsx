@@ -26,7 +26,7 @@ export const Skills = () => {
     const components = [];
     for (let i = 0; i < 3; i++) {
       components.push(
-        <div className="flex flex-col skillBlock">
+        <div className="flex flex-col skill-block">
           {(data?.[i] || []).map((item) => (
             <ProgressBar
               isSmall
@@ -39,11 +39,11 @@ export const Skills = () => {
       );
     }
 
-    return <div className="flex skillsContainer">{components}</div>;
+    return <div className="flex skills-components">{components}</div>;
   };
 
   return (
-    <div>
+    <div className="skills-Container">
       <RowComponent
         component={
           <IconTextComponent
@@ -53,7 +53,6 @@ export const Skills = () => {
             isGold
           />
         }
-        styles={{ marginTop: "8rem" }}
       />
       {SkillsComponents()}
     </div>

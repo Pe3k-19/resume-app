@@ -22,23 +22,20 @@ export const LeftSideContent = () => {
       <div className="mb-1 divider" />
       <EducationSection data={data} />
       {/* Languages */}
-      <div className="mb-1 divider" style={{ marginTop: "4.5rem" }} />
+      <div className="mb-1 divider" style={{ marginTop: "4rem" }} />
       <RowComponent
         component={
           <IconTextComponent icon={EarthIcon} text={t("languages")} isSection />
         }
         styles={{ height: "50px" }}
       />
-      {(data?.languages ?? []).map((item) => (
+      {(data?.languages ?? []).map((item, idx) => (
         <RowComponent
           component={
             <ProgressBar label={item.name[lang]} progress={item.value} />
           }
-          styles={{
-            height: "16px",
-            marginTop: "2rem",
-            alignItems: "flex-start",
-          }}
+          className={`language-block-${idx}`}
+          styles={{ height: "16px" }}
         />
       ))}
     </div>

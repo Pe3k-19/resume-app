@@ -19,9 +19,7 @@ export const IconTextComponent = ({
       <Icon icon={icon} isBig={isSection} isGold={isGold} />
       <div className="flex flex-col items-start justify-center">
         {text && (
-          <span className={`${isSection && "bold uppercase size-24"}`}>
-            {text}
-          </span>
+          <span className={`${isSection && "text-section"}`}>{text}</span>
         )}
         {component && <div className="component">{component()}</div>}
       </div>

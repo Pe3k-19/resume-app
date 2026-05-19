@@ -2,11 +2,31 @@
   margin-top: 1rem;
 }
 
+.language-block-0 {
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.language-block-1 {
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.language-block-2 {
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.language-block-3 {
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
 /* TRIANGLE */
 .triangle-big {
   border-left: 0px solid transparent;
-  border-right: 420px solid transparent;
-  border-top: 420px solid #fca800;
+  border-right: 400px solid transparent;
+  border-top: 400px solid #fca800;
 }
 
 .triangle-small {
@@ -18,6 +38,9 @@
 }
 
 /* PHOTO */
+.photo {
+  height: 400px;
+}
 .photo-line {
   padding: 0.75rem;
   border-radius: 50% 50% 50% 0;
@@ -31,6 +54,7 @@
 /* ROW COMPONENT */
 .row-block {
   height: 50px;
+  gap: 2rem;
 }
 
 .separator {
@@ -57,45 +81,179 @@
 .big-icon {
   height: 32px;
   width: 32px;
+  padding: 3px;
 }
 
 .small-icon {
   height: 24px;
   width: 24px;
+  padding: 3px;
 }
 
 /* PROGRESS BAR */
-.progressBar {
+.progress-bar {
   border-radius: 5px;
 }
 
+.progress-bar-small {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 /* WORK EXPERIENCE */
-.workExperience {
+.work-experience {
   width: 480px;
 }
 
-.positionText {
+.work-block-0 {
+  height: 16px;
+  align-items: flex-start;
+  margin-top: 0.8rem;
+  padding-right: 3rem;
+}
+
+.work-block-1 {
+  height: 16px;
+  align-items: flex-start;
+  margin-top: 11rem;
+  padding-right: 3rem;
+}
+
+.work-block-2 {
+  height: 16px;
+  align-items: flex-start;
+  margin-top: 8.8rem;
+  padding-right: 3rem;
+}
+
+.position-text {
   font-size: 18px;
 }
 
-.projectsBlock {
+.projects-block {
   padding: 1rem 0 0 0.5rem;
 }
 
-.techText {
+.tech-text {
   font-size: 16px;
 }
 
-.skillsContainer {
+.date-text {
+  font-size: 14px;
+}
+
+.skills-Container {
+  padding-right: 3rem;
+  margin-top: 8rem;
+}
+
+.skills-components {
+  padding-top: 1rem;
   padding-left: 3.5rem;
   gap: 0.7rem 1rem;
 }
 
-.skillBlock {
+.skill-block {
   width: 145px;
   gap: 0.8rem;
 }
 
 .component {
   margin-top: 0.15rem;
+}
+
+.certificate-row {
+  margin-top: 9rem;
+}
+
+@media (max-width: 1024px) {
+  .language-block-0 {
+    align-items: flex-start;
+    margin-top: 0.5rem;
+  }
+
+  .triangle-big {
+    border-left: 0px solid transparent;
+    border-right: 300px solid transparent;
+    border-top: 300px solid #fca800;
+  }
+
+  .big-icon {
+    height: 24px;
+    width: 24px;
+    padding: 3px;
+  }
+
+  .small-icon {
+    height: 18px;
+    width: 18px;
+    padding: 3px;
+  }
+
+  .photo {
+    height: 300px;
+  }
+
+  .row-block {
+    height: 50px;
+    gap: 1rem;
+  }
+
+  .work-block-0 {
+    height: 16px;
+    align-items: flex-start;
+    margin-top: 0.8rem;
+    padding-right: 3rem;
+  }
+
+  .work-block-1 {
+    height: 16px;
+    align-items: flex-start;
+    margin-top: 9rem;
+    padding-right: 3rem;
+  }
+
+  .work-block-2 {
+    height: 16px;
+    align-items: flex-start;
+    margin-top: 7rem;
+    padding-right: 3rem;
+  }
+
+  .progress-bar-small {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .position-text {
+    font-size: 14px;
+  }
+
+  .projects-block {
+    padding: 0.5rem 0 0 0.5rem;
+  }
+
+  .tech-text {
+    font-size: 14px;
+  }
+
+  .date-text {
+    font-size: 12px;
+  }
+
+  .skills-Container {
+    padding-right: 3rem;
+    margin-top: 7rem;
+  }
+
+  .skills-components {
+    padding-left: 2rem;
+    gap: 0.7rem 1rem;
+  }
+
+  .certificate-row {
+    margin-top: 6rem;
+  }
 }

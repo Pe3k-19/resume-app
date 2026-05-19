@@ -6,8 +6,6 @@ import { RowComponent } from "../../../components/RowComponent";
 import { WorkExperience } from "../../../components/WorkExperience";
 import { IconTextComponent } from "../../../components/IconTextComponent";
 
-const MARGIN_TOP_BASE = [0.8, 11, 8.8];
-
 export const WorkSection = () => {
   const { t } = useTranslation();
   const [data, setData] = useState<WorkItem[]>();
@@ -20,11 +18,7 @@ export const WorkSection = () => {
     <RowComponent
       key={item._id}
       component={<WorkExperience data={item} />}
-      styles={{
-        height: "16px",
-        alignItems: "flex-start",
-        marginTop: `${MARGIN_TOP_BASE[idx]}rem`,
-      }}
+      className={`work-block-${idx}`}
     />
   ));
 
