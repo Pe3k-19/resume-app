@@ -109,21 +109,21 @@
 .work-block-0 {
   height: 16px;
   align-items: flex-start;
-  margin-top: 0.8rem;
+  margin-top: 0.5rem;
   padding-right: 3rem;
 }
 
 .work-block-1 {
   height: 16px;
   align-items: flex-start;
-  margin-top: 11rem;
+  margin-top: 10rem;
   padding-right: 3rem;
 }
 
 .work-block-2 {
   height: 16px;
   align-items: flex-start;
-  margin-top: 8.8rem;
+  margin-top: 10rem;
   padding-right: 3rem;
 }
 
@@ -132,7 +132,7 @@
 }
 
 .projects-block {
-  padding: 1rem 0 0 0.5rem;
+  padding: 0.5rem 0 0 0.5rem;
 }
 
 .tech-text {
@@ -203,21 +203,21 @@
   .work-block-0 {
     height: 16px;
     align-items: flex-start;
-    margin-top: 0.8rem;
+    margin-top: 0.5rem;
     padding-right: 3rem;
   }
 
   .work-block-1 {
     height: 16px;
     align-items: flex-start;
-    margin-top: 9rem;
+    margin-top: 8.3rem;
     padding-right: 3rem;
   }
 
   .work-block-2 {
     height: 16px;
     align-items: flex-start;
-    margin-top: 7rem;
+    margin-top: 9.8rem;
     padding-right: 3rem;
   }
 
@@ -232,7 +232,7 @@
   }
 
   .projects-block {
-    padding: 0.5rem 0 0 0.5rem;
+    padding: 0.3rem 0 0 0.5rem;
   }
 
   .tech-text {
