@@ -94,7 +94,7 @@ Deploynutý na:
 
 Deploynutý na:
 
-👉 [Render](https://render.com/)
+👉 [Railway](https://railway.com/)
 
 ---
 
