@@ -1,3 +1,4 @@
+import { FormatDate } from "../Utils/formatDate";
 import { useTranslation } from "../Utils/language";
 
 export const WorkExperience = ({ data }: { data: WorkItem }) => {
@@ -9,7 +10,7 @@ export const WorkExperience = ({ data }: { data: WorkItem }) => {
         <span className="uppercase weight-700 position-text">
           {data?.position}
         </span>
-        <span className="uppercase weight-700 date-text">{`${data?.from} - ${data?.to}`}</span>
+        <span className="uppercase weight-700 date-text">{`${FormatDate(data?.from)} - ${FormatDate(data?.to)}`}</span>
       </div>
       <span className="text-gray italic">{data?.company}</span>
       <div className="flex flex-col gap-05 projects-block">

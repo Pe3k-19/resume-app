@@ -10,8 +10,8 @@ const projectSchema = new mongoose.Schema({
 const worksSchema = new mongoose.Schema({
   position: { type: String, required: true },
   company: { type: String, required: true },
-  from: { type: String, required: true },
-  to: { type: String, required: true },
+  from: { type: Date, required: true },
+  to: { type: Date, required: true },
   projects: [projectSchema],
 });
 

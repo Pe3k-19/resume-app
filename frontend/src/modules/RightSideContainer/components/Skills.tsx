@@ -15,8 +15,8 @@ export const Skills = () => {
       .then((res) => {
         setData({
           0: res.slice(0, 7),
-          1: res.slice(7, 13),
-          2: res.slice(13),
+          1: res.slice(7, 14),
+          2: res.slice(14),
         });
       })
       .catch(console.error);
