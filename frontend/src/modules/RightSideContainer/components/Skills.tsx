@@ -1,6 +1,7 @@
 import { useEffect, useState } from "preact/hooks";
 import { apiFetch } from "../../../Utils/api";
 import { useTranslation } from "../../../Utils/language";
+import { DivideDataIntoColumns } from "../../../Utils/data";
 import { ProgressBar } from "../../../components/ProgressBar";
 import { RowComponent } from "../../../components/RowComponent";
 import { BarChartIcon } from "../../../components/Icons/BarChartIcon";
@@ -13,11 +14,7 @@ export const Skills = () => {
   useEffect(() => {
     apiFetch("/skills/?results=20")
       .then((res) => {
-        setData({
-          0: res.slice(0, 7),
-          1: res.slice(7, 14),
-          2: res.slice(14),
-        });
+        setData(DivideDataIntoColumns(res, 7, "React"));
       })
       .catch(console.error);
   }, []);
