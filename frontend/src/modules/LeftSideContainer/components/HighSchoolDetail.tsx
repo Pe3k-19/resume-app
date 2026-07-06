@@ -5,7 +5,7 @@ export const HighSchoolDetail = ({ data }: { data?: HighSchoolItem }) => {
   const { t, lang } = useTranslation();
 
   return (
-    <div className="flex flex-col items-start gap-05 text-left">
+    <div className="flex flex-col items-start gap-05 text-left subsection-block">
       <span className="bold">{t("high_school")}</span>
       <span>{data?.from && data?.to ? `${data.from} - ${data.to}` : "-"}</span>
       <span>{data?.profesion?.[lang]}</span>

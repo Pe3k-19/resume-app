@@ -16,23 +16,21 @@ span {
 }
 
 button {
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  border: 1px solid #7c7c7c;
-  background: #1a1a1a;
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: transition: all 0.2s ease;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.75rem;
+  color: #333333;
+  font-weight: bold;
 }
 
-button:hover {
-  background: #3a3a3a;
-  border-color: #3a3a3a;
-}
-
-button:active {
-  background: #3a3a3a;
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* SHORT CLASSES CSS */
@@ -158,6 +156,9 @@ button:active {
 .size-14 {
   font-size: 14px;
 }
+.size-20 {
+  font-size: 20px;
+}
 .size-24 {
   font-size: 1.5rem;
 }
@@ -167,21 +168,24 @@ button:active {
 .weight-800 {
   font-weight: 800;
 }
+/* CUSTOM */
+.m-hidden {
+  display: block;
+  @media (max-width: 760px) {
+    display: none;
+  }
+}
+.d-hidden {
+  display: none;
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}
 
 @media (max-width: 1024px) {
   span {
     font-weight: 400;
     font-size: 0.75rem;
   }
-
-  button {
-    padding: 0.6rem 1.2rem;
-    border-radius: 8px;
-    border: 1px solid #7c7c7c;
-    background: #1a1a1a;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-weight: 400;
-    font-size: 0.75rem;
-  }
 }
+

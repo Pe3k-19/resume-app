@@ -10,9 +10,10 @@ export const WorkExperience = ({ data }: { data: WorkItem }) => {
         <span className="uppercase weight-700 position-text">
           {data?.position}
         </span>
-        <span className="uppercase weight-700 date-text">{`${FormatDate(data?.from)} - ${FormatDate(data?.to)}`}</span>
+        <span className="uppercase weight-700 date-text m-hidden">{`${FormatDate(data?.from)} - ${FormatDate(data?.to)}`}</span>
       </div>
       <span className="text-gray italic">{data?.company}</span>
+      <span className="uppercase weight-700 date-text d-hidden">{`${FormatDate(data?.from)} - ${FormatDate(data?.to)}`}</span>
       <div className="flex flex-col gap-05 projects-block">
         {(data.projects ?? []).map((project) => (
           <div

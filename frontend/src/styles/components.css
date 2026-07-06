@@ -1,5 +1,14 @@
 .language-container {
-  margin-top: 1rem;
+  width: 65px;
+  height: 30px;
+  gap: 0;
+  border-radius: 20px;
+  border: 2px solid #333333;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #333333;
+  font-size: 1rem;
+  z-index: 1;
 }
 
 .language-block-0 {
@@ -37,6 +46,12 @@
   border-bottom: 150px solid #fca800;
 }
 
+/* RECTANGLE */
+.rectangle {
+  width: 100%;
+  height: 125px;
+  background-color: #fca800;
+}
 /* PHOTO */
 .photo {
   height: 400px;
@@ -255,5 +270,68 @@
 
   .certificate-row {
     margin-top: 6rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .language-container {
+    width: 65px;
+    height: 30px;
+    gap: 0;
+    border-radius: 20px;
+    border: 2px solid #333333;
+    top: -0.3rem;
+    right: 0.6rem;
+    color: #333333;
+    font-size: 1rem;
+  }
+  .photo {
+    height: 175px;
+    margin-top: 2rem;
+  }
+  .photo-line {
+    width: 150px;
+    height: 150px;
+    padding: 0.75rem;
+    border-radius: 50%;
+  }
+  .photo-block {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .projects-block {
+    width: 85vw;
+  }
+  .position-text {
+    font-size: 12px;
+  }
+  .date-text {
+    font-size: 11px;
+  }
+  .work-experience {
+    width: 100%;
+  }
+  .skills-Container {
+    padding-right: 0rem;
+    margin-top: 0rem;
+  }
+  .skills-components {
+    padding-top: 0rem;
+    padding-left: 0.5rem;
+    gap: 0.7rem 1rem;
+  }
+  .skill-block {
+    width: 25vw;
+    gap: 0.8rem;
+  }
+  .progress-bar-small {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .separator {
+    padding-bottom: 0.2rem;
+    opacity: 0.5;
   }
 }

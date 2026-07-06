@@ -104,6 +104,7 @@ Aplikácia je plne responzívna a optimalizovaná pre:
 
 - 💻 Desktop
 - 📟 Tablet
+- 📱 Mobile
 
 Používateľské rozhranie sa automaticky prispôsobuje veľkosti obrazovky pre čo najlepší používateľský zážitok.
 

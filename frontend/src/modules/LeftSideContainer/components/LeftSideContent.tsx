@@ -22,7 +22,7 @@ export const LeftSideContent = () => {
       <div className="mb-1 divider" />
       <EducationSection data={data} />
       {/* Languages */}
-      <div className="mb-1 divider" style={{ marginTop: "4rem" }} />
+      <div className="mb-1 divider" style={{ marginTop: "5rem" }} />
       <RowComponent
         component={
           <IconTextComponent icon={EarthIcon} text={t("languages")} isSection />
