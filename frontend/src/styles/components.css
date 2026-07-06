@@ -1,7 +1,6 @@
 .language-container {
   width: 65px;
   height: 30px;
-  gap: 0;
   border-radius: 20px;
   border: 2px solid #333333;
   top: 0.5rem;
@@ -274,17 +273,6 @@
 }
 
 @media (max-width: 760px) {
-  .language-container {
-    width: 65px;
-    height: 30px;
-    gap: 0;
-    border-radius: 20px;
-    border: 2px solid #333333;
-    top: -0.3rem;
-    right: 0.6rem;
-    color: #333333;
-    font-size: 1rem;
-  }
   .photo {
     height: 175px;
     margin-top: 2rem;

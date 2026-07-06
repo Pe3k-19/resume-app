@@ -16,7 +16,7 @@ export const Layout = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="relative flex items-center justify-center">
+      <div className="relative flex items-center justify-center m-hidden">
         <LanguageSwitcher />
         <div className="flex resume-container">
           <LeftSideContainer />
