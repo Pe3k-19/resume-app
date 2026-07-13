@@ -6,8 +6,6 @@ declare global {
     [key: string]: string;
   }
 
-  type IconProps = JSX.IntrinsicElements["svg"];
-
   type IconType = ComponentType<{
     width?: number;
     height?: number;
@@ -104,5 +102,12 @@ declare global {
 
   interface SkillsGroup {
     [key: string]: SkillItem[];
+  }
+
+  interface ResumeData {
+    me: MeItem;
+    about: AboutItem;
+    works: WorkItem[];
+    skills: SkillsGroup;
   }
 }

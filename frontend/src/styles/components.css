@@ -181,6 +181,33 @@
   margin-top: 9rem;
 }
 
+.loading-screen {
+  width: 1050px;
+  height: 1500px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.loader-spinner {
+  width: 64px;
+  height: 64px;
+  border: 6px solid #5d5f61;
+  border-top-color: #fca800;
+  border-radius: 50%;
+  animation: loader-spin 1.5s linear infinite;
+}
+.loader-text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #5d5f61;
+  text-transform: uppercase;
+}
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 1024px) {
   .language-block-0 {
     align-items: flex-start;

@@ -1,22 +1,10 @@
-import { useEffect, useState } from "preact/hooks";
-import { apiFetch } from "../../../Utils/api";
 import { useTranslation } from "../../../Utils/language";
-import { DivideDataIntoColumns } from "../../../Utils/data";
 import { ProgressBar } from "../../../components/ProgressBar";
 import { BarChartIcon } from "../../../components/Icons/BarChartIcon";
 import { IconTextComponent } from "../../../components/IconTextComponent";
 
-export const SkillsMobile = () => {
+export const SkillsMobile = ({ data }: { data?: SkillsGroup }) => {
   const { t } = useTranslation();
-  const [data, setData] = useState<SkillsGroup>();
-
-  useEffect(() => {
-    apiFetch("/skills/?results=20")
-      .then((res) => {
-        setData(DivideDataIntoColumns(res, 7, "React"));
-      })
-      .catch(console.error);
-  }, []);
 
   const SkillsComponents = () => {
     const components = [];

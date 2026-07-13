@@ -1,5 +1,3 @@
-import { useState, useEffect } from "preact/hooks";
-import { apiFetch } from "../../../Utils/api";
 import { ContactSection } from "./ContactSection";
 import { EducationSection } from "./EducationSection";
 import { useTranslation } from "../../../Utils/language";
@@ -8,13 +6,8 @@ import { EarthIcon } from "../../../components/Icons/EarthIcon";
 import { RowComponent } from "../../../components/RowComponent";
 import { IconTextComponent } from "../../../components/IconTextComponent";
 
-export const LeftSideContent = () => {
-  const [data, setData] = useState<MeItem>();
+export const LeftSideContent = ({ data }: { data?: MeItem }) => {
   const { t, lang } = useTranslation();
-
-  useEffect(() => {
-    apiFetch("/me").then(setData).catch(console.error);
-  }, []);
 
   return (
     <div className="flex flex-col gap-1 text-light left-content-block">

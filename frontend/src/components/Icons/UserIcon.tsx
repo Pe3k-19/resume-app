@@ -1,4 +1,4 @@
-export const UserIcon = ({ width, height, ...rest }: IconProps) => (
+export const UserIcon = ({ width, height, ...rest }: IconType) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"

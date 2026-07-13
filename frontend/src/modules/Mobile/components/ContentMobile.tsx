@@ -9,7 +9,15 @@ import { CertificateIcon } from "../../../components/Icons/CertificateIcon";
 import { HighSchoolDetail } from "../../LeftSideContainer/components/HighSchoolDetail";
 import { CertificatesDetail } from "../../LeftSideContainer/components/CertificatesDetail";
 
-export const ContentMobile = ({ data }: { data?: MeItem }) => {
+export const ContentMobile = ({
+  data,
+  works,
+  skills,
+}: {
+  data?: MeItem;
+  works?: WorkItem[];
+  skills?: SkillsGroup;
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -40,8 +48,8 @@ export const ContentMobile = ({ data }: { data?: MeItem }) => {
           />
         </div>
       </div>
-      <WorkMobile />
-      <SkillsMobile />
+      <WorkMobile data={works} />
+      <SkillsMobile data={skills} />
       <LanguagesMobile data={data} />
     </div>
   );

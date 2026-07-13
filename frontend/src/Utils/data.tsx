@@ -12,22 +12,22 @@ export function AddressToString(data?: AddressItem): string {
 export const DivideDataIntoColumns = (
   data: SkillItem[],
   maxItemsPerColumn: number = 7,
-  firstItemName: string,
-) => {
-  const firstItem = data.find((item) => item.name === firstItemName);
-  const rest = data.filter((item) => item.name !== firstItemName);
+  firstItemName?: string,
+): SkillsGroup  => {
+  const firstItem = firstItemName
+    ? data.find((item) => item.name === firstItemName)
+    : undefined;
+    const rest = firstItem
+    ? data.filter((item) => item.name !== firstItemName)
+    : [...data];
 
-  if (!firstItem) {
-    throw new Error("firstItem not found");
+  const columns: SkillsGroup = { 0: [], 1: [], 2: [] };
+  if (firstItem) columns[0].push(firstItem);
+
+  for (const item of rest) {
+    if (columns[0].length < maxItemsPerColumn) columns[0].push(item);
+    else if (columns[1].length < maxItemsPerColumn) columns[1].push(item);
+    else columns[2].push(item);
   }
-
-  return rest.reduce(
-    (acc: SkillsGroup, item: SkillItem) => {
-      if (acc[0].length !== maxItemsPerColumn) acc[0].push(item);
-      else if (acc[1].length !== maxItemsPerColumn) acc[1].push(item);
-      else acc[2].push(item);
-      return acc;
-    },
-    { 0: [firstItem], 1: [], 2: [] },
-  );
+  return columns;
 };
