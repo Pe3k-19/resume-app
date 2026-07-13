@@ -40,7 +40,7 @@ export const ContentMobile = ({
             component={() => (
               <div>
                 {(data?.certificates ?? []).map((item) => (
-                  <CertificatesDetail data={item} />
+                  <CertificatesDetail key={item._id} data={item} />
                 ))}
               </div>
             )}

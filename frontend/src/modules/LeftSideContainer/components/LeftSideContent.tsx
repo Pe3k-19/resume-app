@@ -24,6 +24,7 @@ export const LeftSideContent = ({ data }: { data?: MeItem }) => {
       />
       {(data?.languages ?? []).map((item, idx) => (
         <RowComponent
+          key={item._id}
           component={
             <ProgressBar label={item.name[lang]} progress={item.value} />
           }

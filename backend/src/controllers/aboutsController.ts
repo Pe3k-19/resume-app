@@ -1,9 +1,9 @@
+import { Request, Response } from "express";
 import { Abouts } from "../models/Abouts";
 
-export const getAbouts = async (req: any, res: any) => {
+export const getAbouts = async (_req: Request, res: Response) => {
   try {
-  const results = parseInt(req.query.results) || 10;
-    const abouts = await Abouts.findOne().limit(results);
+    const abouts = await Abouts.findOne();
     res.json(abouts);
   } catch (error) {
     console.error(error);

@@ -9,6 +9,7 @@ export const translations = {
     work_experience: "Pracovné skúsenosti",
     project: "Projekt",
     skills: "Technické zručnosti",
+    something_went_wrong: "Niečo sa pokazilo",
   },
   en: {
     contact_me: "Contact me",
@@ -20,5 +21,6 @@ export const translations = {
     work_experience: "Work Experience",
     project: "Project",
     skills: "Technical Skills",
+    something_went_wrong: "Something went wrong",
   },
 };

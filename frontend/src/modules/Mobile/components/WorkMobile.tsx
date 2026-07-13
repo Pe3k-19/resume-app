@@ -7,7 +7,7 @@ export const WorkMobile = ({ data }: { data?: WorkItem[] }) => {
   const { t } = useTranslation();
 
   const workItems = (data || []).map((item) => (
-    <WorkExperience data={item} />
+    <WorkExperience key={item._id} data={item} />
   ));
 
   return (

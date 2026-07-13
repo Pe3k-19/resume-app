@@ -59,7 +59,7 @@ declare global {
     _id: string;
     name: string;
     source: string;
-    year: string;
+    year: number;
   }
 
   interface AddressItem {
