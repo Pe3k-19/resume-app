@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import express from "express";
 import routes from "./routes/routes";
 import { connectDB } from "./config/db";
+import { keepAlive } from "./utils/keepAlive";
 
 const startServer = async () => {
   dotenv.config();
@@ -27,6 +28,7 @@ const startServer = async () => {
   );
   app.listen(process.env.PORT || 5000, () => {
     console.log(`Server running on port ${process.env.PORT || 5000}`);
+    keepAlive();
   });
 };
 
